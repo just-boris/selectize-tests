@@ -114,7 +114,7 @@ describe('good tests', function () {
             expect(this.loadSpy).toHaveBeenCalled();
         });
 
-        fit("should fill items on response", function () {
+        it("should fill items on response", function () {
             this.element.control().trigger('click');
             this.element.input().val('test').trigger('keyup');
             jasmine.clock().tick(400);
