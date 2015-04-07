@@ -1,13 +1,17 @@
 module.exports = function(config) {
     config.set({
         basePath: '',
-        frameworks: ['jasmine'],
+        frameworks: ['bower', 'jasmine'],
         files: [
-            'bower_components/jquery/dist/jquery.js',
-            'bower_components/selectize/dist/js/standalone/selectize.js',
-            'bower_components/jasmine-ajax/lib/mock-ajax.js',
-            'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
             'test/*.spec.js'
+        ],
+        bowerPackages: [
+            'jquery',
+            'microplugin',
+            'sifter',
+            'selectize',
+            'jasmine-ajax',
+            'jasmine-jquery'
         ],
         reporters: ['progress'],
         port: 9876,
